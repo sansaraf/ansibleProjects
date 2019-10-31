@@ -42,13 +42,3 @@ ec2_instances:
     exact_count: 1
     count_tag: 
         Name: dev_jumphost
-
-  - instance_type: t2.micro
-    image: "{{ image_id }}"
-    keypair: "{{instances_keypair}}"
-    group: ['web', 'ssh'] 
-    instance_tags: 
-        Name: web
-    exact_count: 1 
-    count_tag: 
-        Name: web
